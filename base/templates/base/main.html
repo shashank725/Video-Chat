@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Video Chat</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'styles/main.css' %}">
+    <script src="{% static 'js/main.js' %}"></script>
+</head>
+<body>
+    <style>
+        .hello-msg{
+          font-size: 18px;
+          color: #fff;
+          margin-right: 20px;
+        }
+      </style>
+      
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img src="{% static 'glug_logo_transparent.png' %}" alt="" srcset="" height="45hv" style="margin-left: 15px;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            </li>
+          </ul>
+        </div>
+      
+        <span class="hello-msg">Hello, {{request.user}}</span>
+        <span ><a  class="hello-msg" href="{% url 'logout' %}">Logout</a></span>
+      </nav>
+
+    {% block content %}
+
+    {% endblock content %}
+</body>
+<!-- <script type="text/javascript" src="{% static 'assets/AgoraRTC_N-4.8.0.js' %}"></script> -->
+
+
+</html>
