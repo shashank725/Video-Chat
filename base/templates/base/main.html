@@ -13,8 +13,14 @@
     <style>
         .hello-msg{
           font-size: 18px;
-          color: #fff;
+          color: rgb(0, 0, 0);
           margin-right: 20px;
+          text-decoration: none;
+        }
+
+        .navbar{
+          display: flex;
+          flex-grow: 1;
         }
       </style>
       
@@ -26,7 +32,7 @@
         </div>
       
         <span class="hello-msg">Hello, {{request.user}}</span>
-        <span ><a  class="hello-msg" href="{% url 'logout' %}">Logout</a></span>
+        <button ><a  class="hello-msg" href="{% url 'logout' %}">Logout</a></button>
       </nav>
 
     {% block content %}
